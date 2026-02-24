@@ -1,0 +1,35 @@
+/* ========================= */
+/* 📦 InfoBox Container */
+/* ========================= */
+
+/* Centers all content inside InfoBox */
+.InfoBox {
+    text-align: center;
+}
+
+
+/* ========================= */
+/* 🃏 Card Container Styling */
+/* ========================= */
+
+/* Centers the Material UI card horizontally */
+.cardContainer {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ========================= */
+/* ✨ Card Hover Animation */
+/* ========================= */
+
+/* Smooth transition effect for the card */
+.cardContainer .MuiCard-root {
+    transition: 0.3s ease;
+}
+
+/* Scale and shadow effect on hover */
+.cardContainer .MuiCard-root:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}

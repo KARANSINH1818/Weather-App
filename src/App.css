@@ -1,0 +1,189 @@
+/* ========================= */
+/* 🌍 Main Container Styling */
+/* ========================= */
+
+.mainContainer {
+  text-align: center;
+  min-height: 100vh;       /* Full screen height */
+  padding: 20px;
+  transition: 0.5s ease;   /* Smooth background/theme transition */
+}
+
+
+/* ========================= */
+/* 🌙 Dark Mode Styling */
+/* ========================= */
+
+.dark {
+  background-color: #121212;
+  color: white;
+}
+
+
+/* ========================= */
+/* 🌤 Dynamic Backgrounds */
+/* ========================= */
+
+.clear-bg {
+  background: linear-gradient(to right, #fddb92, #d1fdff);
+}
+
+.cloud-bg {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+.rain-bg {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+}
+
+.default-bg {
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+
+
+/* ========================= */
+/* 🌧 Animated Weather Effects */
+/* ========================= */
+
+/* Rain Animation Overlay */
+.rain-bg::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://pngimg.com/uploads/rain/rain_PNG13468.png");
+  background-size: 150px;
+  animation: rain 0.3s linear infinite;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+@keyframes rain {
+  from { background-position: 0 0; }
+  to { background-position: 0 100px; }
+}
+
+
+/* Cloud Animation Overlay */
+.cloud-bg::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 100%;
+  background: url("https://pngimg.com/uploads/cloud/cloud_PNG27.png") repeat-x;
+  background-size: 300px;
+  animation: clouds 60s linear infinite;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+@keyframes clouds {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+/* ========================= */
+/* 🌟 Top Buttons Styling */
+/* ========================= */
+
+.toggleBtn {
+  margin: 10px 8px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 🌙 Dark / Light Mode Button */
+.toggleBtn:first-of-type {
+  background-color: #333;
+  color: white;
+}
+
+.toggleBtn:first-of-type:hover {
+  background-color: #555;
+  transform: scale(1.08);
+}
+
+/* 📍 Use My Location Button */
+.toggleBtn:nth-of-type(2) {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+.toggleBtn:nth-of-type(2):hover {
+  background-color: #e63950;
+  transform: scale(1.08);
+}
+
+
+/* 📱 Responsive Buttons */
+@media (max-width: 600px) {
+  .toggleBtn {
+    width: 90%;
+    margin: 8px auto;
+    display: block;
+  }
+}
+
+
+/* ========================= */
+/* 🟢 Recent Search Buttons */
+/* ========================= */
+
+.historyBtn {
+  margin: 6px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.historyBtn:hover {
+  background-color: #218838;
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* 📱 Responsive History Buttons */
+@media (max-width: 600px) {
+  .historyBtn {
+    width: 80%;
+    display: block;
+    margin: 8px auto;
+  }
+}
+
+
+/* ========================= */
+/* 🎨 Animated App Title */
+/* ========================= */
+
+.app-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  animation: colorChange 4s infinite, popEffect 2s infinite alternate;
+}
+
+/* Automatic Color Change Animation */
+@keyframes colorChange {
+  0%   { color: #2ecc71; }
+  25%  { color: #27ae60; }
+  50%  { color: #16a085; }
+  75%  { color: #1abc9c; }
+  100% { color: #2ecc71; }
+}
+
+/* Zoom / Pop Effect Animation */
+@keyframes popEffect {
+  from { transform: scale(1); }
+  to   { transform: scale(1.1); }
+}
