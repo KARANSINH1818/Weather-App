@@ -1,16 +1,180 @@
-# React + Vite
+# 🌦 Weather App - React + MUI + OpenWeather API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-Build%20Tool-purple?logo=vite)](https://vitejs.dev/)
+[![MUI](https://img.shields.io/badge/MUI-Material%20UI-007FFF?logo=mui)](https://mui.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![OpenWeather](https://img.shields.io/badge/API-OpenWeather-orange)](https://openweathermap.org/api)
 
-Currently, two official plugins are available:
+A modern and responsive Weather Application built using React and Material UI.  
+This app fetches real-time weather data using the OpenWeather API and provides dynamic backgrounds, dark mode, search history tracking, and location-based weather detection.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clean UI. Animated backgrounds. Real-time API integration.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌐 Live Demo
 
-## Expanding the ESLint configuration
+🔗 https://karansinh1818.github.io/Weather-App/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Live Deployment
+
+🔗 https://weather-ql0v3lc0m-karansinh1818s-projects.vercel.app/
+---
+
+
+## 🚀 Features
+
+- 🌍 Search weather by city name
+- 📍 Detect weather using current GPS location
+- 🌡 Real-time temperature, humidity, min/max temperature
+- 🌦 Dynamic weather-based backgrounds (Rain, Cloud, Clear)
+- 🌙 Dark / Light mode toggle
+- 🔄 Loading indicator during API calls
+- 🕒 Last 5 search history tracking
+- ⚛ Built using React Hooks (useState, useEffect)
+- 🎨 Material UI components
+- 📱 Fully responsive layout
+
+---
+
+## 🛠 Tech Stack
+
+- React.js  
+- JavaScript (ES6+)  
+- CSS3 (Animations, Flexbox, Responsive Design)  
+- OpenWeather API  
+- Material UI (MUI)  
+- Vite  
+- HTML5  
+
+---
+
+# 📦 Installation & Setup
+
+## 🔹 Create Project
+
+```bash
+npm create vite@latest weather-app
+cd weather-app
+npm install
+npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+```
+
+---
+
+## 🔹 Add OpenWeather API Key (Recommended)
+
+Create a `.env` file in root folder:
+
+```env
+VITE_WEATHER_API_KEY=your_api_key_here
+```
+
+Then use it in your code:
+
+```javascript
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+```
+
+---
+
+## 🔹 Run Development Server
+
+```bash
+npm run dev
+```
+
+Open in browser:
+
+```
+http://localhost:5173/
+```
+
+---
+
+## 🔹 Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+# 🚀 Deploy to GitHub Pages
+
+## Install gh-pages
+
+```bash
+npm install gh-pages --save-dev
+```
+
+---
+
+## Update vite.config.js
+
+```javascript
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  base: "/weather-app/",
+})
+```
+
+---
+
+## Update package.json scripts
+
+```json
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist"
+```
+
+---
+
+## Deploy
+
+```bash
+npm run deploy
+```
+
+---
+
+## 🧠 How It Works
+
+1. User enters a city name or clicks "Use My Location".
+2. App sends request to OpenWeather API.
+3. Weather data is fetched and formatted.
+4. Background updates dynamically based on weather condition.
+5. Search history is stored.
+6. Dark mode toggles theme instantly.
+
+Weather updates without refreshing the page.
+
+---
+
+## 🎯 Future Improvements
+
+- 🌦 Add hourly forecast
+- 📅 Add 7-day forecast
+- 🌡 Weather charts
+- 🌍 Country flag detection
+- 🎨 Glassmorphism UI
+- 🔔 Weather alert notifications
+
+---
+
+## 👨‍💻 Author
+
+**Karansinh Mori**  
+Frontend Developer 🚀  
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a star ⭐ on GitHub!
+
+Follow for more projects 👉 https://github.com/karansinh1818
